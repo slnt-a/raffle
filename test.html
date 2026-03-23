@@ -1,0 +1,137 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 16px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.navbar::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url(Photo/monkey.webp) no-repeat center/cover;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+    filter: blur(0px);
+    z-index: -1;
+}
+
+.navbar.scrolled::before {
+    opacity: 0;
+    filter: blur(8px);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.navlink a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 12px;
+    transition: color 0.3s ease;
+}
+
+.navlink a:hover {
+    color: #fff;
+}
+
+.action button {
+    margin-left: 10px;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+
+
+/* DEFAULT HTML */
+html, body {
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    background-color: #fff;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.hero {
+    position: relative;
+    height: 100vh;
+    background: url(Photo/monkey.webp) center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    padding: 0 8%;
+    color: #fff;
+}
+/* Dark overlay */
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+}
+/* Content */
+.hero-content {
+    position: relative;
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-size: 56px;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    opacity: 0.9;
+}
+/* Testimonial (right side) */
+.hero-quote {
+    position: absolute;
+    right: 8%;
+    bottom: 20%;
+    max-width: 300px;
+    font-size: 14px;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+/* Section below */
+.section {
+    font-size: 36px;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.section h2 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #222
+}
+
+.section p {
+    max-width: 700px;
+    margin: 0 auto;
+    color: #555;
+    font-size: 16px;
+}
